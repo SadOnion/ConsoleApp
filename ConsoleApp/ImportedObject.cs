@@ -33,7 +33,7 @@
             ClearAndCorrect();
         }
 
-        public void AssignChildrens(IEnumerable<ImportedObject> importedObjects)
+        public void AssignChildren(IEnumerable<ImportedObject> importedObjects)
         {
             NumberOfChildren = importedObjects.Count(obj => IsParentOf(obj));
         }

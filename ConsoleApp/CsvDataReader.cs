@@ -16,7 +16,7 @@
             
             foreach (var importedObject in importedObjects)
             {
-                importedObject.AssignChildrens(importedObjects);
+                importedObject.AssignChildren(importedObjects);
             }
 
             ImportedObjects = importedObjects;
