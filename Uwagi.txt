@@ -1,0 +1,25 @@
+Błędy:
+- literówka przy nazwie pliku "dataa.csv" -> "data.csv"
+- kod nie obsługiwał możliwości błędnych danych w szczególności pętla for w lini 27
+- NumberOfChildren double ? raczej powinna być liczba całkowita
+
+Uwagi:
+importedObject.Type.Trim().Replace(" ", "") - nie ma sensu robić jednocześnie Trim a potem Replace
+jeżeli chcemy usunąć wszystkie białe znaki to samo Replace wystarczy (nie widziałem sensu usuwania białych znaków w środku tekstu więc zastosowałem samo Trim)
+
+klasy powinny być w osobnych plikach
+
+lepiej trzymać się jednej konwencji nie powinno się używać jednocześnie
+{
+    get;
+    set;
+}
+
+i {get; set; }
+
+nie została zastosowana zasada Single responsibility
+funkcja jest za długa i sama jej nazwa już sugeruje ,że robi kilka rzeczy
+Import"AND"PrintData
+
+nie widzę sensu w klasie ImportedObjectBaseClass aby uczynić klase ImportedObject bardziej uniwersalną
+możnaby np. użyć interfejsu IImportedObject i dać potrzebne metody i property
